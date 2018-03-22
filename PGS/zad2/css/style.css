@@ -224,7 +224,7 @@ hr.slim {
     75%  {transform: scale(1);}
 }
 
-.btn-main:hover p, .btn-play div img:hover {
+.btn-main:hover p, .btn-play div svg:hover {
     animation: none;
     transform: scale(1.05);
     text-shadow:2px 2px 3px #000;
