@@ -1,0 +1,386 @@
+/*font-family: 'Montserrat', sans-serif;
+font-family: 'Playfair Display', serif;*/
+@font-face {
+    font-family: Georgia;
+    src: url("/font/georgia%20italic.ttf");
+}
+
+*{
+    box-sizing: border-box;    
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+	color: #fff;
+}
+
+
+
+
+/************    HEADER        **************/
+
+
+#hero {
+    width: 100%;
+    height: 100vh;
+    background-color: #0c0c0c;
+    background-image: url(../img/Layer%206.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+
+header {
+    width: 100%;
+    height: 150px;
+    color: #fff;
+    line-height: 150px;
+}
+
+.font-menu {
+    font-family: Montserrat;
+    font-weight: 600;
+    font-size: 14pt;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+	color: #fff;
+}
+
+#menu a, #menu naw, #menu naw li, #menu div{
+    display: inline-block;
+}
+
+#menu {
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
+    height: inherit;
+    line-height: inherit;
+}
+
+#logo {
+    position:absolute;
+    left: 0;
+    top: 58px;
+    width: 34px;
+    height: 34px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+}
+
+naw {
+    width: 99%;
+    text-align: center;
+	
+}
+
+naw li {
+    margin: 0 15px;
+    transition: all 0.2s linear;
+	color: #fff;
+}
+
+naw li:hover {
+    text-shadow: 3px 3px 2px #0e0603;
+}
+
+.menu-right {
+    position: absolute;
+    height: 34px;
+    width: 100px;
+    right: 0;
+    top: 51px;
+    font-size: 24px;
+    line-height: 34px;
+}
+
+#search {
+    position: relative;
+    top: -3px;
+    margin-right: 0px;
+    cursor: pointer;
+}
+
+
+#burger {
+    width: 34px;
+    height: 34px;
+    line-height: 34px;
+    margin-left: 30px;
+    cursor: pointer;
+    
+}
+
+#burger div {
+    position: relative;
+    width: 34px;
+    height: 34px;
+    border: 0;
+    border-bottom: 3px solid #fff;
+    background: transparent;
+}
+
+#burger div::after, #burger div::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    top: 12px;
+    left: 0;
+    border-bottom: 3px solid #fff;
+}
+
+#burger div::after {
+    transform: translateY(9px);
+    width: 28px;
+    left: 6px;
+}
+
+hr.slim {
+    width: 90%;
+    margin: 0 auto;
+    opacity: 0.3;
+}
+
+
+
+/************    FRONT PAGE        **************/
+
+.main-text {
+    color: #fff;
+    position: absolute;
+    width: 100%;
+    bottom: 50%;
+}
+
+.main-text h1 {
+
+    font-family: 'Playfair Display';
+    font-size: 140px;
+    font-weight: 100;
+    text-align: center;
+    margin: 0;
+    margin-bottom: 20px;
+    
+}
+
+.main-text p {
+    font-family: Montserrat;
+    width: 36%;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 1.8em;
+}
+
+.front-container {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 45%;
+    overflow: hidden;
+
+}
+
+.btn-main {
+    position: relative;
+    background-color: #da7074;
+    width: 160px;
+    height: 50px;
+    border-radius: 20px;
+    font-size: 12pt;
+    font-family: Montserrat;
+    font-weight: 600;
+    line-height: 50px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #fff;
+    letter-spacing: 2px;
+    margin: 0 auto;
+    cursor: pointer;
+    box-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+
+}
+
+.btn-main p {
+    position:relative;
+    z-index: 999;
+    transition: all 1s ease;
+    animation: 1.8s pulse infinite;
+
+}
+
+@keyframes pulse{
+    20% {transform: scale(1);}
+    50% {transform: scale(1.05);text-shadow:2px 2px 3px #000;}
+    80%  {transform: scale(1);}
+}
+
+.btn-main:hover p, .btn-play div img:hover {
+    animation: none;
+    transform: scale(1.05);
+    text-shadow:2px 2px 3px #000;
+}
+
+.btn-main:hover .line,
+.btn-main:hover .line:before{
+    width: 220px;
+}
+
+
+.red-horizontal {
+    position: absolute;
+    top: 25px;
+    left: 50%;
+    width: 170px;
+    border-top: 0px;
+    color: #da7074;
+    background-color: #da7074;
+    height: 1px;
+    margin:0;
+    transition: all 1s ease;
+}
+.red-horizontal::before {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: -100%;
+    width: 170px;
+    border-top: 0px;
+    color: #da7074;
+    background-color: #da7074;
+    height: 1px;
+    margin:0;
+}
+
+.red-vertical {
+    position: absolute;
+    top: 80px;
+    left: 50%;
+    width: 150px;
+    border-top: 0px;
+    color: #da7074;
+    background-color: #da7074;
+    height: 1px;
+    margin:0;
+    transform-origin: left;
+    transform: rotateZ(90deg);
+    transition: all 1s ease;
+}
+
+.red-vertical::before {
+    content: '';
+    position: absolute;
+    top: 4px;
+    left: -15px;
+    width: 150px;
+    border-top: 0px;
+    color: #da7074;
+    background-color: #da7074;
+    height: 1px;
+    margin:0;
+    transition: all 1s ease;
+
+}
+   
+.btn-play {
+    width: 100%;
+    height: 82px;
+    position: absolute;
+    bottom: 20px;
+}
+
+.btn-play div {
+    width: 82px;
+    height: inherit;
+    margin: 0 auto;
+}
+
+.btn-play div img {
+    animation: 1.8s pulse infinite;
+    cursor: pointer;
+}
+
+
+
+
+/************    Section 1       **************/
+
+
+.slider {
+    width: 100%;
+    height: 500px;
+    padding: 0;
+    
+    
+}
+
+.slider h3, .slider p {
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    font-family: Montserrat;
+    text-align: center;
+    position: relative;
+    top: 65%;
+}
+
+.slider h3 {
+    text-transform: uppercase;
+    font-size: 16px;
+    letter-spacing: 2px;
+}
+
+.slider p {
+    font-family: Georgia;
+    font-style: italic;
+    line-height: 30px;
+    font-weight: 100;
+    letter-spacing: 1px;
+}
+
+.slider div {
+    height: 400px;
+    width: 25%;
+    display: inline-block;
+    margin: 0px;
+    padding: 0;  
+    margin-right: -4px;
+    transition: all 1s ease;
+}
+
+.slider div:hover{
+    filter: grayscale(0.3) brightness(1.5);
+    
+}
+
+#img1 {
+    background-image: url(../img/Layer%2011.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+#img2 {
+    background-image: url(../img/Layer%208.jpg);
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#img3 {
+    background-image: url(../img/Layer%209.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#img4 {
+    background-image: url(../img/Layer%2010.jpg);
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
