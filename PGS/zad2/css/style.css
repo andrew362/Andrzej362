@@ -232,7 +232,7 @@ hr.slim {
 
 .btn-main:hover .line,
 .btn-main:hover .line:before{
-    width: 220px;
+    width: 200px;
 }
 
 
@@ -263,9 +263,9 @@ hr.slim {
 
 .red-vertical {
     position: absolute;
-    top: 80px;
+    top: 60px;
     left: 50%;
-    width: 150px;
+    width: 120px;
     border-top: 0px;
     color: #da7074;
     background-color: #da7074;
@@ -281,7 +281,7 @@ hr.slim {
     position: absolute;
     top: 4px;
     left: -15px;
-    width: 150px;
+    width: 120px;
     border-top: 0px;
     color: #da7074;
     background-color: #da7074;
@@ -304,7 +304,7 @@ hr.slim {
     margin: 0 auto;
 }
 
-.btn-play div img {
+.btn-play div svg {
     animation: 1.8s pulse infinite;
     cursor: pointer;
 }
@@ -354,8 +354,12 @@ hr.slim {
     display: inline-block;
     margin: 0px;
     padding: 0;  
-    margin-right: -4px;
+    margin-right: -3px;
     transition: all 1s ease;
+}
+
+.slider a:last-child div {
+    margin-left: 0px;  
 }
 
 .slider div:hover{
