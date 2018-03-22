@@ -6,7 +6,8 @@ font-family: 'Playfair Display', serif;*/
 }
 
 *{
-    box-sizing: border-box;    
+    box-sizing: border-box;
+
 }
 
 li {
@@ -18,7 +19,9 @@ a {
 	color: #fff;
 }
 
-
+html {
+        font-size: 10px;
+}
 
 
 /************    HEADER        **************/
@@ -44,7 +47,7 @@ header {
 .font-menu {
     font-family: Montserrat;
     font-weight: 600;
-    font-size: 14pt;
+    font-size: 1.5rem;
     text-transform: uppercase;
     letter-spacing: 1px;
 	color: #fff;
@@ -159,17 +162,20 @@ hr.slim {
 .main-text h1 {
 
     font-family: 'Playfair Display';
-    font-size: 140px;
+    font-size: 10rem;
     font-weight: 100;
     text-align: center;
     margin: 0;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+    white-space: nowrap;
     
 }
 
 .main-text p {
     font-family: Montserrat;
-    width: 36%;
+    font-size: 1.4rem;
+    width: 27%;
+    min-width: 400px;
     margin: 0 auto;
     text-align: center;
     line-height: 1.8em;
@@ -187,13 +193,13 @@ hr.slim {
 .btn-main {
     position: relative;
     background-color: #da7074;
-    width: 160px;
-    height: 50px;
+    width: 120px;
+    height: 35px;
     border-radius: 20px;
-    font-size: 12pt;
+    font-size: 1.3rem;
     font-family: Montserrat;
     font-weight: 600;
-    line-height: 50px;
+    line-height: 35px;
     text-align: center;
     text-transform: uppercase;
     color: #fff;
@@ -208,14 +214,14 @@ hr.slim {
     position:relative;
     z-index: 999;
     transition: all 1s ease;
-    animation: 1.8s pulse infinite;
+    animation: 1.6s pulse infinite;
 
 }
 
 @keyframes pulse{
     20% {transform: scale(1);}
-    50% {transform: scale(1.05);text-shadow:2px 2px 3px #000;}
-    80%  {transform: scale(1);}
+    55% {transform: scale(1.02);text-shadow:1px 1px 1px #000;}
+    75%  {transform: scale(1);}
 }
 
 .btn-main:hover p, .btn-play div img:hover {
@@ -232,7 +238,7 @@ hr.slim {
 
 .red-horizontal {
     position: absolute;
-    top: 25px;
+    top: 18px;
     left: 50%;
     width: 170px;
     border-top: 0px;
@@ -293,7 +299,7 @@ hr.slim {
 }
 
 .btn-play div {
-    width: 82px;
+    width: 60px;
     height: inherit;
     margin: 0 auto;
 }
@@ -311,8 +317,8 @@ hr.slim {
 
 .slider {
     width: 100%;
-    height: 500px;
     padding: 0;
+    margin-bottom: 100px;
     
     
 }
@@ -329,12 +335,13 @@ hr.slim {
 
 .slider h3 {
     text-transform: uppercase;
-    font-size: 16px;
+    font-size: 1.6rem;
     letter-spacing: 2px;
 }
 
 .slider p {
     font-family: Georgia;
+    font-size: 1.4rem;
     font-style: italic;
     line-height: 30px;
     font-weight: 100;
@@ -384,3 +391,55 @@ hr.slim {
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+
+/************    Footer      **************/
+
+footer div .credits {
+    display: flex;
+    color: rgba(21,21,21,0.9);
+    justify-content: space-between;
+    margin-bottom: 100px;
+}
+
+
+.credits li{
+    font-family: Georgia;
+    font-style: italic;
+    font-size: 1.5rem;
+    font-weight: 100;
+    line-height: 1.8em;
+}
+
+.font-menu {
+    text-transform: uppercase;
+    font-family: Montserrat;
+    font-weight: bold;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #151515;
+    margin-bottom: 40px;
+    
+    
+}
+
+.footer-column {
+    padding-left: 8%;
+    width: 25%;
+}
+
+.footer-column:last-child {
+    width: 50%;
+    padding-right: 8%;
+}
+
+.copyright {
+    padding: 25px;
+    text-align: center;
+    background-color: #000;
+    color: #fff;
+    font-size: 1.4rem;
+    font-family: Georgia;
+}
+
