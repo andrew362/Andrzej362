@@ -39,9 +39,9 @@ html {
 
 header {
     width: 100%;
-    height: 150px;
+    height: 130px;
     color: #fff;
-    line-height: 150px;
+    line-height: 130px;
 }
 
 .font-menu {
@@ -53,7 +53,7 @@ header {
 	color: #fff;
 }
 
-#menu a, #menu naw, #menu naw li, #menu div{
+#menu a, #menu naw, #menu naw li, #menu div {
     display: inline-block;
 }
 
@@ -65,14 +65,24 @@ header {
     line-height: inherit;
 }
 
+
+
 #logo {
     position:absolute;
     left: 0;
-    top: 58px;
-    width: 34px;
-    height: 34px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
     border: 2px solid #fff;
     border-radius: 50%;
+    background-color: transparent;
+    transition: all 1s ease;
+}
+
+#logo:hover {
+    box-shadow: 0px 0px 1px #0e0603;
+    background-color: #FFF;
 }
 
 naw {
@@ -85,9 +95,10 @@ naw li {
     margin: 0 15px;
     transition: all 0.2s linear;
 	color: #fff;
+    font-size: 1.3rem;
 }
 
-naw li:hover {
+naw li:hover{
     text-shadow: 3px 3px 2px #0e0603;
 }
 
@@ -96,56 +107,53 @@ naw li:hover {
     height: 34px;
     width: 100px;
     right: 0;
-    top: 51px;
-    font-size: 24px;
-    line-height: 34px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2.2rem;
+    line-height: 32px;
+    overflow: visible;
 }
 
 #search {
     position: relative;
-    top: -3px;
-    margin-right: 0px;
     cursor: pointer;
+    margin-right: 30%;
+    transition: all 2s ease;
 }
 
 
-#burger {
-    width: 34px;
-    height: 34px;
-    line-height: 34px;
-    margin-left: 30px;
-    cursor: pointer;
-    
-}
 
-#burger div {
-    position: relative;
-    width: 34px;
-    height: 34px;
-    border: 0;
-    border-bottom: 3px solid #fff;
-    background: transparent;
-}
-
-#burger div::after, #burger div::before {
-    content: '';
+#search-input {
+    background-color: #fff;
     position: absolute;
-    width: 100%;
-    top: 12px;
-    left: 0;
-    border-bottom: 3px solid #fff;
+    background-color: #fff;
+    top: 0;
+    right: 40px;
+    opacity:0;
+    transition: all 0.5s ease;
 }
 
-#burger div::after {
-    transform: translateY(9px);
-    width: 28px;
-    left: 6px;
+#search:hover #search-input {
+    opacity: 1;
 }
+
+
+#burger img {
+    width: 30px;
+    transform: translateY(25%);
+}
+
+
+
 
 hr.slim {
     width: 90%;
     margin: 0 auto;
-    opacity: 0.3;
+    height: 1px;
+    background-color: #000;
+    border: 0;
+    opacity: 0.1;
+    
 }
 
 
@@ -230,18 +238,21 @@ hr.slim {
     text-shadow:2px 2px 3px #000;
 }
 
-.btn-main:hover .line,
-.btn-main:hover .line:before{
-    width: 200px;
+.btn-main:hover .red-horizontal,
+.btn-main:hover .red-horizontal:before{
+    width: 280px;
 }
-
+.btn-main:hover .red-vertical,
+.btn-main:hover .red-vertical:before{
+    width: 130px;
+}
 
 .red-horizontal {
     position: absolute;
     top: 18px;
     left: 50%;
     width: 170px;
-    border-top: 0px;
+    border: 0px;
     color: #da7074;
     background-color: #da7074;
     height: 1px;
@@ -252,21 +263,22 @@ hr.slim {
     content: '';
     position: absolute;
     top: 0px;
-    left: -100%;
+    right: 100%;
     width: 170px;
     border-top: 0px;
     color: #da7074;
     background-color: #da7074;
     height: 1px;
     margin:0;
+    transition: all 1s ease;
 }
 
 .red-vertical {
     position: absolute;
     top: 60px;
     left: 50%;
-    width: 120px;
-    border-top: 0px;
+    width: 100px;
+    border: 0px;
     color: #da7074;
     background-color: #da7074;
     height: 1px;
@@ -281,7 +293,7 @@ hr.slim {
     position: absolute;
     top: 4px;
     left: -15px;
-    width: 120px;
+    width: 100px;
     border-top: 0px;
     color: #da7074;
     background-color: #da7074;
