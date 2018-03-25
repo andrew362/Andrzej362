@@ -1,0 +1,125 @@
+
+* {
+    user-select: none;
+}
+
+body {
+    background-color: gray;
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    
+}
+
+h1 {
+    text-align: center;
+    line-height: 150px;
+    font-size: 6em;
+    text-transform: uppercase;
+    font-family: 'Plaster', cursive;
+    margin: 0;
+}
+
+#title {
+    background-color: green;
+    margin: 0;
+    padding: 0;
+    min-width: 600px;
+}
+
+
+
+.nav {
+    width: 100%;
+    margin: auto;
+    font-size: 24px;
+    height: 60px;
+    background-color: #fff;
+}
+
+.nav table {
+    width:600px;
+    margin: 0 auto;
+    text-align: center;
+    table-layout: fixed;
+    
+}
+
+.nav tr td {
+    height: 60px;
+    vertical-align: middle;
+    
+}
+
+.nav tr td div {
+    display: inline-block;
+}
+
+.btn {
+    border: 1px solid black;
+    box-sizing: border-box;
+    cursor: pointer;
+    width: 90px;
+    padding:6px;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background-color: aquamarine;
+	transition: all 0.6s;
+}
+
+#reset {
+    width: 200px;
+}
+
+.selected {
+    background-color: coral;
+}
+
+#wrapper {
+    min-width: 600px;
+    padding: 0;
+    margin: 0;
+    
+}
+
+#number {
+    height: 150px;
+    background-color: #fff;
+    line-height: 65px;
+    font-size: 0.8em;
+    min-width: 600px;
+}
+
+#colorDisplay {
+    font-size: 1.5em;
+}
+
+#number p {
+    padding:0;
+    margin: 0;
+    font-size: 3em;
+    text-align: center;
+   
+}
+
+.square {
+    width: 30%;
+    padding-top: 30%;
+    background-color: aqua;
+    margin: 1.66%;
+    float:left;
+    border-radius: 15px;
+	transition: background 0.7s;
+}
+
+#container {
+    max-width: 800px;
+    min-width: 600px;
+    margin: 40px auto;
+}
+
+#info {
+    color: firebrick;
+}

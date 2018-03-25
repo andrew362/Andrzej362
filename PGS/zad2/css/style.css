@@ -220,7 +220,7 @@ hr.slim {
 .btn-main p {
     position:relative;
     z-index: 999;
-    transition: all 1s ease;
+    transition: transform 1s ease;
     animation: 1.6s pulse infinite;
 
 }
@@ -256,7 +256,7 @@ hr.slim {
     background-color: #da7074;
     height: 1px;
     margin:0;
-    transition: all 1s ease;
+    transition: width 1s ease;
 }
 .red-horizontal::before {
     content: '';
@@ -269,7 +269,7 @@ hr.slim {
     background-color: #da7074;
     height: 1px;
     margin:0;
-    transition: all 1s ease;
+    transition: width 1s ease;
 }
 
 .red-vertical {
@@ -327,11 +327,24 @@ hr.slim {
 
 
 .slider {
-    width: 100%;
     padding: 0;
     margin-bottom: 100px;
-    
-    
+    display: flex;
+    justify-content: space-around;
+    align-content: stretch;
+    flex-wrap: wrap;
+}
+
+.slider a{
+    flex: 1 0 auto;
+    width: 25%;
+    min-width: 100px;
+}
+
+
+.slider a div {
+    height: 400px;
+    transition: filter 1s ease;
 }
 
 .slider h3, .slider p {
@@ -359,15 +372,7 @@ hr.slim {
     letter-spacing: 1px;
 }
 
-.slider div {
-    height: 400px;
-    width: 25%;
-    display: inline-block;
-    margin: 0px;
-    padding: 0;  
-    margin-right: -3px;
-    transition: filter 1s ease;
-}
+
 
 .slider a:last-child div {
     margin-left: 0px;  
@@ -383,7 +388,7 @@ hr.slim {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-
+    
 }
 
 #img2 {
@@ -418,18 +423,20 @@ footer div .credits {
 }
 
 
-.credits li{
+.credits li, .credits li a{
     font-family: Georgia;
     font-style: italic;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     font-weight: 100;
-    line-height: 1.8em;
+    line-height: 2em;
+    color: rgba(21,21,21,0.9);
 }
 
-.font-menu {
+.credits .font-menu {
     text-transform: uppercase;
-    font-family: Montserrat;
-    font-weight: bold;
+    font-family: Arial, Roboto;
+    font-weight: 900;
+    letter-spacing: 0px !important;
     font-size: 1.5rem;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -450,9 +457,9 @@ footer div .credits {
 }
 
 .copyright {
-    padding: 25px;
+    padding: 20px;
     text-align: center;
-    background-color: #000;
+    background-color: rgba(21,21,21,1);
     color: #fff;
     font-size: 1.4rem;
     font-family: Georgia;
