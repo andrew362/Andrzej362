@@ -1,11 +1,12 @@
 /*font-family: 'Montserrat', sans-serif;
 font-family: 'Playfair Display', serif;*/
+
 @font-face {
     font-family: Georgia;
     src: url("/font/georgia%20italic.ttf");
 }
 
-*{
+* {
     box-sizing: border-box;
 
 }
@@ -16,16 +17,16 @@ li {
 
 a {
     text-decoration: none;
-	color: #fff;
+    color: #fff;
 }
 
 html {
-        font-size: 8px;
+    font-size: 8px;
 }
 
 
-/************    HEADER        **************/
 
+/************    HEADER        **************/
 
 #hero {
     width: 100%;
@@ -35,6 +36,7 @@ html {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: bottom;
+    
 }
 
 header {
@@ -50,10 +52,13 @@ header {
     font-size: 1.5rem;
     text-transform: uppercase;
     letter-spacing: 1px;
-	color: #fff;
+    color: #fff;
 }
 
-#menu a, #menu naw, #menu naw li, #menu div {
+#menu a,
+#menu naw,
+#menu naw li,
+#menu div {
     display: inline-block;
 }
 
@@ -68,7 +73,7 @@ header {
 
 
 #logo {
-    position:absolute;
+    position: absolute;
     left: 0;
     top: 50%;
     transform: translateY(-50%);
@@ -88,17 +93,17 @@ header {
 naw {
     width: 99%;
     text-align: center;
-	
+
 }
 
 naw li {
     margin: 0 15px;
     transition: all 0.2s linear;
-	color: #fff;
+    color: #fff;
     font-size: 1.3rem;
 }
 
-naw li:hover{
+naw li:hover {
     text-shadow: 3px 3px 2px #0e0603;
 }
 
@@ -112,6 +117,7 @@ naw li:hover{
     font-size: 2.2rem;
     line-height: 32px;
     overflow: visible;
+    z-index: 199;
 }
 
 #search {
@@ -121,26 +127,41 @@ naw li:hover{
     transition: transform 0.5s ease;
 }
 
-
+#search:hover #modal-search{
+    display: table;
+}
 
 #search:hover {
     transform: scale(1.2);
 }
 
 #burger {
-    transition: transform 0.5s ease;
+    display: none !important;
 }
 
 #burger img {
     width: 30px;
     transform: translateY(25%);
-    cursor: pointer;
+
 }
 
 
-#burger:hover {
-    transform: scale(1.2);
-    
+#mobile-menu {
+    position: absolute;
+    font-size: 1.1em;
+    font-family: Montserrat;
+    text-align: right;
+    line-height: 3em;
+    background-color: #da7074;
+    padding: 10% 10px 10% 40px;
+    right: 0;
+    top: 0;
+    display:none !important;
+}
+
+#burger:hover #mobile-menu{
+    display: block !important;
+    opacity: 0.9;
 }
 
 
@@ -152,7 +173,52 @@ hr.slim {
     background-color: #000;
     border: 0;
     opacity: 0.1;
-    
+
+}
+
+
+#modal-search {
+    position: fixed;
+    top: 0;
+    width: 200vw;
+    height: 100vh;
+    left: -100vw;
+    background-color: #fff;
+    z-index: 999;
+    opacity: 0.8;
+    display: none;
+}
+
+#modal-search form {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    font-family: Montserrat;
+}
+
+#modal-search form input[type="text"] {
+    width: 80%;
+    margin: 0 auto;
+    height: 7%;
+    margin-bottom: 20px;
+    display: block;
+    font-size: 2em;
+}
+
+#modal-search form input[type="submit"] {
+    width: 30%;
+    margin: 0 auto;
+    height: 4%;
+    display: block;
+    background-color: #da7074;
+    font-size: 1.3em;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px #000;
+}
+
+#modal-search form input[type="submit"]:hover {
+    color: #fff;
 }
 
 
@@ -163,26 +229,26 @@ hr.slim {
     color: #fff;
     position: absolute;
     width: 100%;
-    bottom: 50%;
+    bottom: 52vh;
 }
 
 .main-text h1 {
 
     font-family: 'Playfair Display';
-    font-size: 10rem;
+    font-size: 12rem;
     font-weight: 100;
     text-align: center;
     margin: 0;
     margin-bottom: 10px;
-    white-space: nowrap;
-    
+
+
 }
 
 .main-text p {
     font-family: Montserrat;
-    font-size: 1.4rem;
-    width: 27%;
-    min-width: 400px;
+    font-size: 1.5rem;
+    width: 25%;
+    min-width: 300px;
     margin: 0 auto;
     text-align: center;
     line-height: 1.8em;
@@ -213,40 +279,49 @@ hr.slim {
     letter-spacing: 2px;
     margin: 0 auto;
     cursor: pointer;
-    box-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
 
 }
 
 .btn-main p {
-    position:relative;
+    position: relative;
     z-index: 999;
     transition: transform 1s ease;
     animation: 1.6s pulse infinite;
 
 }
 
-@keyframes pulse{
-    20% {transform: scale(1);}
-    55% {transform: scale(1.02);text-shadow:1px 1px 1px #000;}
-    75%  {transform: scale(1);}
+@keyframes pulse {
+    20% {
+        transform: scale(1);
+    }
+    55% {
+        transform: scale(1.02);
+        text-shadow: 1px 1px 1px #000;
+    }
+    75% {
+        transform: scale(1);
+    }
 }
 
-.btn-main:hover p, .btn-play div svg:hover {
+.btn-main:hover p,
+.btn-play div svg:hover {
     animation: none;
     transform: scale(1.05);
-    text-shadow:2px 2px 3px #000;
+    text-shadow: 2px 2px 3px #000;
 }
 
-.btn-main:hover .red-horizontal,
-.btn-main:hover .red-horizontal:before{
+.btn-main:hover .line-horizontal,
+.btn-main:hover .line-horizontal:before {
     width: 280px;
 }
-.btn-main:hover .red-vertical,
-.btn-main:hover .red-vertical:before{
+
+.btn-main:hover .line-vertical,
+.btn-main:hover .line-vertical:before {
     width: 130px;
 }
 
-.red-horizontal {
+.line-horizontal {
     position: absolute;
     top: 18px;
     left: 50%;
@@ -255,10 +330,11 @@ hr.slim {
     color: #da7074;
     background-color: #da7074;
     height: 1px;
-    margin:0;
+    margin: 0;
     transition: width 1s ease;
 }
-.red-horizontal::before {
+
+.line-horizontal::before {
     content: '';
     position: absolute;
     top: 0px;
@@ -268,11 +344,11 @@ hr.slim {
     color: #da7074;
     background-color: #da7074;
     height: 1px;
-    margin:0;
+    margin: 0;
     transition: width 1s ease;
 }
 
-.red-vertical {
+.line-vertical {
     position: absolute;
     top: 60px;
     left: 50%;
@@ -281,13 +357,13 @@ hr.slim {
     color: #da7074;
     background-color: #da7074;
     height: 1px;
-    margin:0;
+    margin: 0;
     transform-origin: left;
     transform: rotateZ(90deg);
     transition: width 1s ease;
 }
 
-.red-vertical::before {
+.line-vertical::before {
     content: '';
     position: absolute;
     top: 4px;
@@ -297,11 +373,11 @@ hr.slim {
     color: #da7074;
     background-color: #da7074;
     height: 1px;
-    margin:0;
+    margin: 0;
     transition: width 1s ease;
 
 }
-   
+
 .btn-play {
     width: 100%;
     height: 82px;
@@ -325,7 +401,6 @@ hr.slim {
 
 /************    Section 1       **************/
 
-
 .slider {
     padding: 0;
     margin-bottom: 100px;
@@ -335,7 +410,7 @@ hr.slim {
     flex-wrap: wrap;
 }
 
-.slider a{
+.slider a {
     flex: 1 0 auto;
     width: 25%;
     min-width: 100px;
@@ -347,7 +422,8 @@ hr.slim {
     transition: filter 1s ease;
 }
 
-.slider h3, .slider p {
+.slider h3,
+.slider p {
     margin: 0;
     padding: 0;
     color: #fff;
@@ -375,12 +451,12 @@ hr.slim {
 
 
 .slider a:last-child div {
-    margin-left: 0px;  
+    margin-left: 0px;
 }
 
-.slider div:hover{
+.slider div:hover {
     filter: grayscale(0.3) brightness(1.5);
-    
+
 }
 
 #img1 {
@@ -388,7 +464,7 @@ hr.slim {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    
+
 }
 
 #img2 {
@@ -417,19 +493,21 @@ hr.slim {
 
 footer div .credits {
     display: flex;
-    color: rgba(21,21,21,0.9);
+    color: rgba(21, 21, 21, 0.9);
     justify-content: space-between;
-    margin-bottom: 100px;
+    margin-bottom: 5%;
+
 }
 
 
-.credits li, .credits li a{
+.credits li,
+.credits li a {
     font-family: Georgia;
     font-style: italic;
     font-size: 1.4rem;
     font-weight: 100;
     line-height: 2em;
-    color: rgba(21,21,21,0.9);
+    color: rgba(21, 21, 21, 0.9);
 }
 
 .credits .font-menu {
@@ -441,9 +519,10 @@ footer div .credits {
     text-transform: uppercase;
     letter-spacing: 1px;
     color: #151515;
-    margin-bottom: 40px;
-    
-    
+    margin-bottom: 20px;
+    height: 30px;
+
+
 }
 
 .footer-column {
@@ -459,9 +538,75 @@ footer div .credits {
 .copyright {
     padding: 20px;
     text-align: center;
-    background-color: rgba(21,21,21,1);
+    background-color: rgba(21, 21, 21, 1);
     color: #fff;
     font-size: 1.4rem;
     font-family: Georgia;
 }
 
+@media (max-width: 960px) {
+
+    .slider a {
+        width: 50%;
+    }
+    footer div .credits {
+        flex-wrap: wrap;
+        align-content: space-between;
+    }
+
+    .footer-column {
+        padding-left: 10%;
+        width: 33%;
+        margin-bottom: 30px;
+
+    }
+
+    .footer-column:last-child {
+        width: 1000%;
+        padding:0 10%;
+    }
+
+}
+
+@media (max-width: 540px) {
+    .footer-column {
+        padding-left: 6%;
+        width: 33%;
+        margin-bottom: 20px;
+        
+
+    }
+
+    .footer-column:last-child {
+        width: 1000%;
+        padding: 6%;
+    }
+
+    .slider a {
+        width: 100%;
+    }
+
+    #menu naw li {
+        display: none !important;
+    }
+
+    #burger {
+        display: inline-block !important;
+    }
+
+    header {
+        height: 80px;
+    }
+    
+    .main-text h1 {
+        font-size: 8rem;
+        white-space: pre-wrap;
+    }
+    .main-text p {
+        font-size: 1.5rem;
+        line-height: 1.3em;
+    }
+    .main-text {
+        bottom: 50vh;
+    }
+}
