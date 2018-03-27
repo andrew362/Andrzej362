@@ -137,6 +137,7 @@ naw li:hover {
 
 #burger {
     display: none !important;
+    transition: opacity 0.5s ease;
 }
 
 #burger img {
@@ -148,16 +149,21 @@ naw li:hover {
 
 #mobile-menu {
     position: absolute;
+    top: 100%;
+    right: 0;
+    z-index: 999;
+    opacity: 0.8;
+    display: none;
     font-size: 1.1em;
     font-family: Montserrat;
     text-align: right;
     line-height: 3em;
     background-color: #da7074;
     padding: 10% 10px 10% 40px;
-    right: 0;
-    top: 0;
     display:none !important;
 }
+
+
 
 #burger:hover #mobile-menu{
     display: block !important;
@@ -178,11 +184,10 @@ hr.slim {
 
 
 #modal-search {
-    position: fixed;
-    top: 0;
-    width: 200vw;
-    height: 100vh;
-    left: -100vw;
+    position: absolute;
+    top: 100%;
+    width: 50vw;
+    right: 0;
     background-color: #fff;
     z-index: 999;
     opacity: 0.8;
@@ -382,7 +387,7 @@ hr.slim {
     width: 100%;
     height: 82px;
     position: absolute;
-    bottom: 20px;
+    bottom: 0px;
 }
 
 .btn-play div {
