@@ -7,14 +7,14 @@
     <title>Zadanie 2</title>
     <meta name="description" content="PGS">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
+
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/reset.css">
-     <link rel="stylesheet" href="css/style.css">
-    
+    <link rel="stylesheet" href="css/style.css">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat|Playfair+Display|Roboto" rel="stylesheet">
-    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 </head>
 
@@ -33,36 +33,45 @@
                     <li><a href="#contact">Contact</a></li>
                 </naw>
                 <div class="menu-right">
-                    
+
                     <div id="search">
                         <i class="fa fa-search"></i>
-                           <section id="modal-search">
-       <form action="#" method="get">
-           <input type="text" name="searchValue" placeholder="What would you like to find...?">
-           <input type="submit" value="Search" class="submitBtn" >
-        </form>
-   </section>
+                    </div>
+                    <div id="modal-search">
+                            <form action="#" method="get">
+                                <input type="text" name="searchValue" placeholder="What would you like to find...?">
+                                <input type="submit" value="Search" class="submitBtn">
+                            </form>
                     </div>
                     <div id="burger">
-                       <img src="img/burger.svg" alt="">      <div id="mobile-menu">
-                           <ul>
-                               <li><a href="#">Home</a></li>
-                                <li><a href="#contact">About</a></li>
-                                <li><a href="#contact">Contact</a></li>
-                           </ul>
-                       </div> 
+                        <svg version="1.1" id="Warstwa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 34 20" style="enable-background:new 0 0 34 20;" xml:space="preserve">
+                            <style type="text/css">
+                                .st0{fill:none;stroke:#fff;stroke-width:3;stroke-miterlimit:10;}
+                            </style>
+                            <line class="st0" x1="0" y1="2.1" x2="34" y2="2.1"/>
+                            <line class="st0" x1="0" y1="18.1" x2="34" y2="18.1"/>
+                            <line class="st0" x1="8" y1="10.1" x2="34" y2="10.1"/>
+                        </svg>
                     </div>
-                     
+                    <div id="mobile-menu">
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#contact">About</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
+
+
                 </div>
             </div>
 
         </header>
 
-       
-         
-       
-       
-       
+
+
+
+
+
         <hr class="slim">
 
         <div class="main-text">
@@ -71,7 +80,7 @@
             </div>
             <div>
                 <p>
-                    Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum , ut fermentum massa justo sit amet erat a ante venenatis dapibus posuere velit aliquet. 
+                    Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum , ut fermentum massa justo sit amet erat a ante venenatis dapibus posuere velit aliquet.
                 </p>
             </div>
         </div>
@@ -87,7 +96,7 @@
 
         <div class="btn-play">
             <div>
-               <a href="#">
+                <a href="#">
 					<svg version="1.1" id="Warstwa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 					viewBox="0 0 84.7 84.3" style="enable-background:new 0 0 84.7 84.3;" xml:space="preserve">
 					<style type="text/css">
@@ -102,10 +111,10 @@
 
     </div>
 
-   
 
-   
-   
+
+
+
     <section class="slider">
         <a href="#">
             <div id="img1">
@@ -115,7 +124,7 @@
         </a>
         <a href="#">
             <div id="img2">
-                <h3>Lorem Cursus </h3> 
+                <h3>Lorem Cursus </h3>
                 <p>Ligula</p>
             </div>
         </a>
@@ -176,7 +185,7 @@
                     </li>
                 </div>
             </div>
-            
+
             <div class="copyright">
                 <p>
                     Copyright © 2016 @samiralley
@@ -191,7 +200,19 @@
 
 
 
-
+<script>
+    
+    $('#burger').on('click', function() {
+        $('#menu .menu-right #mobile-menu').toggle('slow', function(){
+        });
+    });
+    
+    $('#search').on('click', function(e) {
+        $('#modal-search').toggle('slow', function(){
+        });
+    })
+   
+</script>
 
 
 </body>

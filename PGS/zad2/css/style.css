@@ -127,9 +127,7 @@ naw li:hover {
     transition: transform 0.5s ease;
 }
 
-#search:hover #modal-search{
-    display: table;
-}
+
 
 #search:hover {
     transform: scale(1.2);
@@ -140,14 +138,15 @@ naw li:hover {
     transition: opacity 0.5s ease;
 }
 
-#burger img {
+#burger svg {
     width: 30px;
     transform: translateY(25%);
+    cursor: pointer;
 
 }
 
 
-#mobile-menu {
+#menu .menu-right #mobile-menu {
     position: absolute;
     top: 100%;
     right: 0;
@@ -160,15 +159,9 @@ naw li:hover {
     line-height: 3em;
     background-color: #da7074;
     padding: 10% 10px 10% 40px;
-    display:none !important;
+    display:none;
 }
 
-
-
-#burger:hover #mobile-menu{
-    display: block !important;
-    opacity: 0.9;
-}
 
 
 
@@ -183,7 +176,7 @@ hr.slim {
 }
 
 
-#modal-search {
+#menu .menu-right #modal-search {
     position: absolute;
     top: 100%;
     width: 50vw;
