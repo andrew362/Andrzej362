@@ -8,6 +8,12 @@ var title = document.getElementById("title");
 var reset = document.getElementById("reset");
 var easyBtn = document.getElementById("easyBtn");
 var hardBtn = document.getElementById("hardBtn");
+var scoreArea = document.querySelector("#score-area span");
+var hiScoreArea = document.querySelector("#hiScore-area span");
+var score = 0;
+var scoreMultiply = 1;
+var hiscore = localStorage.getItem('hiscore') || 0;
+hiScoreArea.innerHTML = hiscore;
 
 easyMode();
 
@@ -39,7 +45,7 @@ function easyMode() {
             squares[i].style.display = "none";
         }
     newGame(3);
-    
+    scoreMultiply = 1;
 }
 
 function hardMode() {
@@ -49,6 +55,7 @@ function hardMode() {
             squares[i].style.display = "block";
         }
     newGame(6);
+    scoreMultiply = 3;
 }
 
 function modeCheck() {
@@ -57,6 +64,7 @@ function modeCheck() {
     } else if(hardBtn.classList.contains("selected")) {
         return 6;
     } 
+    
 }
 
 
@@ -70,29 +78,61 @@ function changeAllColors(color) {
 function goodOrNot() {
         var clickedColor = (this.style.background);
         if (clickedColor === pickedColor) {
-            info.textContent = "Correct!!!";
-            reset.textContent = "Play Again?";
+            info.textContent = "Correct!";
+            reset.textContent = "Give me more!";
             title.style.background = pickedColor;
             changeAllColors(pickedColor);
+            cleanListeners(modeCheck());
+            playerScore (1);
+
             } else {
-                info.textContent = "Try Again...";
+                info.textContent = "Game Over";
                 this.style.background = "gray";
+                reset.textContent = "Play Again?";
+                cleanListeners(modeCheck());
+                playerScore (0);
+
             }
 }
 
 
+
 function newGame(num){
+
+    if (reset.textContent == 'New Game') playerScore(0);
     title.style.background = "gray";
     colors = generateRandomColors(num);
     pickedColor = colors[randomPickedColor(num)];
     colorDisplay.textContent = pickedColor;
     reset.textContent = "New Game";
-    info.textContent = "";    
+    info.textContent = "";
+    mark1 = true;   
     for(var i = 0; i < num; i++){
         squares[i].style.background = colors[i];
         squares[i].addEventListener("click", goodOrNot);
     }
 }
+
+function cleanListeners(num) {
+    for(var i = 0; i < num; i++){
+        squares[i].removeEventListener("click", goodOrNot);
+    }
+}
+
+function playerScore (pt) {
+    if(pt) score += scoreMultiply;
+    else if(!pt) score = 0;
+    scoreArea.innerHTML = score;
+    
+    
+    
+
+    if (score > hiscore) {
+        localStorage.setItem('hiscore', score);
+        hiScoreArea.innerHTML = score;
+    }
+    }
+
 
 reset.addEventListener("click", function(){newGame(modeCheck())});
 

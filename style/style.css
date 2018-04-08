@@ -9,6 +9,7 @@ body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
     
+    
 }
 
 h1 {
@@ -32,7 +33,7 @@ h1 {
 .nav {
     width: 100%;
     margin: auto;
-    font-size: 24px;
+    font-size: 20px;
     height: 60px;
     background-color: #fff;
 }
@@ -90,6 +91,13 @@ h1 {
     line-height: 65px;
     font-size: 0.8em;
     min-width: 600px;
+}
+
+#score-area {
+    position: relative;
+    top: 0;
+    left:0;
+
 }
 
 #colorDisplay {
